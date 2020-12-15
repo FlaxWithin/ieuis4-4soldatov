@@ -1,0 +1,184 @@
+body {background:#CCC url(img/bg.gif) repeat-y fixed bottom center;color:#333;margin:-19px 0;text-align:center;font:normal 0.76em sans-serif,Arial;}
+.gfx a {background:#F5F5F5 url(img/bright_pixel.gif) no-repeat;display:block;height:130px}
+.center {text-align:center}
+/* header */
+.header {background:#FFF;border-bottom:1px solid #E5E5E5;font:bold 2.6em Arial;line-height:3em}
+/* main */
+.main {background:#FFF;border:3px double #EEE;border-color:#E4E4E4 #CFCFCF #CCC #CFCFCF;margin:20px auto 0px auto;text-align:left;width:960px}
+.frame {position: relative;margin:20px auto 0px auto;text-align:left;width:960px}
+.frame1 {height: 40px; 
+    position: fixed; 
+    bottom:0%;
+    width:100%; 
+    background-color: #F5F5F5; 
+    opacity: 1;}
+/* menu */
+.menu a {background:#EEE;border-right:1px solid #CECECE;border-top:1px solid #E5E5E5;color:#888;text-align:center;float:left;padding-top:21px;width:158px;height:58px;}
+.menu a span {padding-left:12px;margin:0;font:normal 24px,Arial;color:#444;}
+.menu a:hover {background:#EEE url(img/bgmenu.gif) repeat-x;color:#555}
+.menu a#last {width:159px;border-right:none}
+/* content */
+.content {background:#F5F5F5;border-top:1px solid #E5E5E5;clear:both}
+.content h1 {margin:0;font:bold 2em sans-serif,Arial;color:#666}
+.content p {margin:3px 0 6px;color:#666;font: 1.4em Arial}
+/* button */
+.item {background:#FCFCFC url(img/bgitem.gif) repeat-x;padding:10px}
+/* footer */
+.footer {padding:5px;background:#F5F5F5;color:#666}
+.footer .left, .footer .right {padding:0 12px}
+.footer .right, .footer .right a {color:#AAA}
+.footer .right a:hover {color:#444}
+/* floats */
+.left {float:left}
+.right {float:right}
+.clearer {clear:both}
+
+body {
+  font: 13px/20px "Lucida Grande", Tahoma, Verdana, sans-serif;
+  color: #404040;
+  background: #93cedf;
+}
+
+.container {
+  margin: 80px auto;
+  width: 400px;
+  text-align: center;
+}
+
+.container > .dropdown {
+  margin: 0 20px;
+  vertical-align: top;
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  height: 28px;
+  width: 150px;
+  background: #f2f2f2;
+  border: 1px solid;
+  border-color: white #f7f7f7 whitesmoke;
+  border-radius: 3px;
+  background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
+  background-image: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
+  background-image: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.06));
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+}
+
+.dropdown:before, .dropdown:after {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  top: 9px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 4px dashed;
+  border-color: #888888 transparent;
+  pointer-events: none;
+}
+
+.dropdown:before {
+  border-bottom-style: solid;
+  border-top: none;
+}
+
+.dropdown:after {
+  margin-top: 7px;
+  border-top-style: solid;
+  border-bottom: none;
+}
+
+.dropdown-select {
+  position: relative;
+  width: 130%;
+  margin: 0;
+  padding: 6px 8px 6px 10px;
+  height: 28px;
+  line-height: 14px;
+  font-size: 12px;
+  color: #62717a;
+  text-shadow: 0 1px white;
+  background: #f2f2f2; /* Fallback for IE 8 */
+  background: rgba(0, 0, 0, 0) !important; /* "transparent" doesn't work with Opera */
+  border: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
+.dropdown-select:focus {
+  z-index: 3;
+  width: 100%;
+  color: #394349;
+  outline: 2px solid #49aff2;
+  outline: 2px solid -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.dropdown-select > option {
+  margin: 3px;
+  padding: 6px 8px;
+  text-shadow: none;
+  background: #f2f2f2;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* Fix for IE 8 putting the arrows behind the select element. */
+
+.lt-ie9 .dropdown {
+  z-index: 1;
+}
+
+.lt-ie9 .dropdown-select {
+  z-index: -1;
+}
+
+.lt-ie9 .dropdown-select:focus {
+  z-index: 3;
+}
+
+/* Dirty fix for Firefox adding padding where it shouldn't. */
+
+@-moz-document url-prefix() {
+  .dropdown-select {
+    padding-left: 6px;
+  }
+}
+
+.dropdown-dark {
+  background: #444;
+  border-color: #111111 #0a0a0a black;
+  background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.4));
+  background-image: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.4));
+  background-image: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.4));
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.4));
+  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-dark:before {
+  border-bottom-color: #aaa;
+}
+
+.dropdown-dark:after {
+  border-top-color: #aaa;
+}
+
+.dropdown-dark .dropdown-select {
+  color: #aaa;
+  text-shadow: 0 1px black;
+  background: #444;  /* Fallback for IE 8 */
+}
+
+.dropdown-dark .dropdown-select:focus {
+  color: #ccc;
+}
+
+.dropdown-dark .dropdown-select > option {
+  background: #444;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.4);
+}
